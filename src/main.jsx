@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./chartjs-setup"; // Importez le fichier de configuration ici
 import App from "./App.jsx";
 import "./index.css";
 
