@@ -30,7 +30,7 @@ const LoginPage = () => {
           id: data.id,
           name: data.name,
           telephone: data.telephone,
-          userrole: data.userrole,
+          role: data.role,
           token: data.token,
         };
         localStorage.setItem("user", JSON.stringify(userData));

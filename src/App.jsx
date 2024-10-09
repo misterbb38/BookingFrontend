@@ -8,6 +8,8 @@ import TerrainsPage from "./pages/TerrainsPage";
 import DashboardHome from "./pages/DashboardHome";
 import ReservationDetails from "./pages/ReservationDetails";
 import Finance from "./pages/Finance";
+import AdminPage from "./pages/AdminPage";
+import TerrainPage from "./pages/TerrainPage";
 
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -33,6 +35,8 @@ function App() {
               element={<ReservationDetails />}
             />
             <Route path="finance" element={<Finance />} />
+            <Route path="admin" element={<AdminPage />} />
+            <Route path="terrainPage" element={<TerrainPage />} />
           </Route>
         </Route>
       </Routes>
