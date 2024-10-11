@@ -102,14 +102,17 @@ const ReservationForm = () => {
     }
 
     setIsSubmitting(true); // Commencer le chargement
-
+    // Concaténer les créneaux horaires sélectionnés en une chaîne de caractères
+    const timeSlotsString = selectedTimes
+      .map((slot) => `${slot.startTime}-${slot.endTime}`)
+      .join(",");
     const reservationData = {
       fieldId: selectedTerrain,
       date: selectedDate,
-      startTime: selectedTimes[0]?.startTime,
-      endTime: selectedTimes[selectedTimes.length - 1]?.endTime,
+      timeSlots: timeSlotsString,
       telephone,
       paymentMethod,
+      time: selectedTimes.length,
     };
 
     try {
@@ -267,7 +270,7 @@ const ReservationForm = () => {
 
             <div className="mt-4">
               <label className="block text-sm font-medium text-gray-700">
-                Numéro de téléphone :
+                Numéro de téléphone(avec +221) :
               </label>
               <input
                 type="text"
